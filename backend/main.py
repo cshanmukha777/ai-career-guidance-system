@@ -1,6 +1,20 @@
-from recommendation import recommend_careers
-from skill_gap import find_skill_gaps
-from roadmap import generate_roadmap
+from backend.recommendation import recommend_careers
+from backend.skill_gap import find_skill_gaps
+from backend.roadmap import generate_roadmap
+
+
+def get_skill_level(skill):
+    while True:
+        try:
+            value = int(input(f"Enter your {skill} skill level (0-10): "))
+
+            if 0 <= value <= 10:
+                return value
+
+            print("Enter a value between 0 and 10.")
+
+        except ValueError:
+            print("Please enter a valid number.")
 
 
 def display_recommendations(user_skills):
@@ -56,15 +70,24 @@ def display_roadmap(career, skill_gaps):
 
 
 def main():
-    user_skills = {
-        "python": 8,
-        "sql": 6,
-        "mathematics": 9,
-        "statistics": 6,
-        "machine_learning": 5,
-        "data_visualization": 3,
-        "communication": 7
-    }
+    print("\n===== AI CAREER GUIDANCE SYSTEM =====\n")
+
+    skills = [
+        "python",
+        "sql",
+        "mathematics",
+        "statistics",
+        "machine_learning",
+        "data_visualization",
+        "communication"
+    ]
+
+    user_skills = {}
+
+    for skill in skills:
+        user_skills[skill] = get_skill_level(skill)
+
+    print("\nAnalyzing your skills...")
 
     display_recommendations(user_skills)
 
