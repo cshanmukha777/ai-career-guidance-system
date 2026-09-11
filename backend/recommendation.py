@@ -71,19 +71,3 @@ def recommend_careers(user_skills):
     return results
 
 
-user = {
-    "python": 8,
-    "sql": 6,
-    "mathematics": 9,
-    "statistics": 7,
-    "machine_learning": 6,
-    "communication": 7
-}
-
-
-recommendations = recommend_careers(user)
-
-print("\nCareer Recommendations\n")
-
-for result in recommendations:
-    print(f"{result['career']}: {result['match']}%")

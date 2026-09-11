@@ -54,31 +54,3 @@ def find_skill_gaps(user_skills, career):
     }
 
 
-user = {
-    "python": 8,
-    "sql": 6,
-    "mathematics": 9,
-    "statistics": 6,
-    "machine_learning": 5,
-    "data_visualization": 3
-}
-
-career = "Data Scientist"
-
-result = find_skill_gaps(user, career)
-
-print("\nSkill Gap Analysis\n")
-print("Career:", result["career"])
-
-print("\nStrong Skills:")
-for skill in result["strong_skills"]:
-    print("-", skill)
-
-print("\nSkill Gaps:")
-for gap in result["skill_gaps"]:
-    print(
-        f"- {gap['skill']}: "
-        f"Current {gap['current_level']}/10, "
-        f"Required {gap['required_level']}/10, "
-        f"Need +{gap['needed']}"
-    )
