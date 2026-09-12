@@ -2,6 +2,7 @@ from recommendation import recommend_careers
 from skill_gap import find_skill_gaps
 from roadmap import generate_roadmap
 
+
 def get_skill_level(skill):
     while True:
         try:
@@ -23,6 +24,8 @@ def display_recommendations(user_skills):
 
     for index, result in enumerate(recommendations[:3], start=1):
         print(f"{index}. {result['career']} - {result['match']}%")
+
+    return recommendations[:3]
 
 
 def get_skill_gaps(user_skills, career):
@@ -88,9 +91,27 @@ def main():
 
     print("\nAnalyzing your skills...")
 
-    display_recommendations(user_skills)
+    recommendations = display_recommendations(user_skills)
 
-    selected_career = "Data Scientist"
+    print("\nChoose a career for detailed analysis:")
+
+    for index, result in enumerate(recommendations, start=1):
+        print(f"{index}. {result['career']}")
+
+    while True:
+        try:
+            choice = int(input("\nEnter your choice: "))
+
+            if 1 <= choice <= len(recommendations):
+                selected_career = recommendations[choice - 1]["career"]
+                break
+
+            print("Choose a valid career number.")
+
+        except ValueError:
+            print("Please enter a valid number.")
+
+    print(f"\nSelected Career: {selected_career}")
 
     skill_gaps = get_skill_gaps(
         user_skills,
