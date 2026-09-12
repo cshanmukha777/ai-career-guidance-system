@@ -119,4 +119,7 @@ Perform Skill-Gap Analysis
 Generate Personalized Roadmap
        |
        v
-Installation ## Clone the Repository git clone [https://github.com/cshanmukha777/ai-career-guidance-system.git](https://github.com/cshanmukha777/ai-career-guidance-system.git) ## Move Into the Project Directory cd ai-career-guidance-system ## Check Python Installation python3 --version ## Run the Application python3 backend/main.py
+Installation ## Clone the Repository git clone [https://github.com/cshanmukha777/ai-career-guidance-system.git](https://github.com/cshanmukha777/ai-career-guidance-system.git) 
+## Move Into the Project Directory cd ai-career-guidance-system 
+## Check Python Installation python3 --version 
+## Run the Application python3 backend/main.py
