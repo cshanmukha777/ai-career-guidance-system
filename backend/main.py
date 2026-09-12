@@ -1,8 +1,6 @@
-from recommendation import recommend_careers
-from skill_gap import find_skill_gaps
-from roadmap import generate_roadmap
-
-
+from backend.recommendation import recommend_careers
+from backend.skill_gap import find_skill_gaps
+from backend.roadmap import generate_roadmap
 def get_user_skills():
     print("\n========== AI CAREER GUIDANCE SYSTEM ==========\n")
 
