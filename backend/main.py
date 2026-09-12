@@ -51,24 +51,42 @@ def get_skill_gaps(user_skills, career):
     return result["skill_gaps"]
 
 
-def display_roadmap(career, skill_gaps):
-    result = generate_roadmap(career, skill_gaps)
+def display_roadmap(selected_career, skill_gaps):
+    print("\n========== PERSONALIZED LEARNING ROADMAP ==========\n")
+
+    result = generate_roadmap(
+        selected_career,
+        skill_gaps
+    )
 
     if "error" in result:
         print(result["error"])
         return
 
-    print("\nPersonalized Learning Roadmap\n")
+    print(f"Career Goal: {result['career']}")
+    print(f"Estimated Duration: {result['duration']}")
 
-    for item in result["roadmap"]:
-        print(f"\nSkill: {item['skill']}")
+    print("\nLearning Stages:")
 
-        for step_number, step in enumerate(
-            item["learning_steps"],
-            start=1
-        ):
-            print(f"{step_number}. {step}")
+    for stage in result["stages"]:
+        print(f"\n{stage['stage']}")
 
+        print("\nSkills to Learn:")
+
+        for skill in stage["skills"]:
+            print(f"- {skill}")
+
+        print("\nLearning Tasks:")
+
+        for task in stage["tasks"]:
+            print(f"- {task}")
+
+        print(f"\nPractical Project: {stage['project']}")
+
+    print("\nPossible Entry-Level Job Roles:")
+
+    for role in result["job_roles"]:
+        print(f"- {role}")
 
 def main():
     print("\n===== AI CAREER GUIDANCE SYSTEM =====\n")
