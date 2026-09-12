@@ -6,21 +6,21 @@ CAREER_PATHS = {
             {
                 "stage": "Stage 1: Learn the Fundamentals",
                 "skills": [
-                    "Python basics",
+                    "Python",
                     "Excel",
                     "SQL",
-                    "Basic statistics"
+                    "Basic Statistics"
                 ],
                 "tasks": [
-                    "Practice Python variables, loops, functions and lists",
-                    "Learn Excel formulas, pivot tables and charts",
-                    "Practice SELECT, WHERE, GROUP BY and JOIN in SQL",
+                    "Learn Python variables, loops, functions and lists",
+                    "Practice Excel formulas, pivot tables and charts",
+                    "Practice SQL SELECT, WHERE, GROUP BY and JOIN",
                     "Learn mean, median, percentage and standard deviation"
                 ],
                 "project": "Analyze student marks or sales data using Excel and Python"
             },
             {
-                "stage": "Stage 2: Data Analysis Tools",
+                "stage": "Stage 2: Learn Data Analysis Tools",
                 "skills": [
                     "NumPy",
                     "Pandas",
@@ -31,33 +31,33 @@ CAREER_PATHS = {
                 "tasks": [
                     "Clean missing and duplicate data",
                     "Filter and group data using Pandas",
-                    "Create charts and dashboards",
-                    "Build a Power BI dashboard"
+                    "Create charts using Matplotlib and Seaborn",
+                    "Build a dashboard using Power BI"
                 ],
                 "project": "Create a sales dashboard using Python and Power BI"
             },
             {
-                "stage": "Stage 3: Portfolio Projects",
+                "stage": "Stage 3: Build Portfolio Projects",
                 "skills": [
-                    "Data cleaning",
-                    "Data visualization",
-                    "Business analysis",
-                    "Dashboard development"
+                    "Data Cleaning",
+                    "Data Visualization",
+                    "Business Analysis",
+                    "Dashboard Development"
                 ],
                 "tasks": [
-                    "Download a real dataset",
+                    "Download a real-world dataset",
                     "Clean and analyze the dataset",
                     "Find useful business insights",
                     "Upload the project to GitHub"
                 ],
-                "project": "Customer sales analysis and business insights project"
+                "project": "Build a customer sales analysis project"
             }
         ],
         "job_roles": [
             "Junior Data Analyst",
+            "Data Analyst Intern",
             "Business Intelligence Intern",
-            "Reporting Analyst",
-            "Data Analyst Intern"
+            "Reporting Analyst"
         ]
     },
 
@@ -66,21 +66,21 @@ CAREER_PATHS = {
         "duration": "8-12 months",
         "stages": [
             {
-                "stage": "Stage 1: Programming and Mathematics",
+                "stage": "Stage 1: Python and Mathematics",
                 "skills": [
                     "Python",
                     "NumPy",
                     "Pandas",
                     "Statistics",
-                    "Linear algebra"
+                    "Linear Algebra"
                 ],
                 "tasks": [
                     "Practice Python programming",
-                    "Learn data manipulation with Pandas",
+                    "Learn data manipulation using Pandas",
                     "Study probability and statistics",
                     "Learn basic linear algebra"
                 ],
-                "project": "Exploratory data analysis on a real dataset"
+                "project": "Perform exploratory data analysis on a real dataset"
             },
             {
                 "stage": "Stage 2: Machine Learning",
@@ -89,37 +89,37 @@ CAREER_PATHS = {
                     "Classification",
                     "Clustering",
                     "Scikit-learn",
-                    "Model evaluation"
+                    "Model Evaluation"
                 ],
                 "tasks": [
                     "Learn supervised and unsupervised learning",
                     "Train regression and classification models",
-                    "Evaluate models using accuracy and error metrics",
+                    "Evaluate models using suitable metrics",
                     "Understand overfitting and underfitting"
                 ],
-                "project": "House price prediction or student performance prediction"
+                "project": "Build a house price prediction system"
             },
             {
-                "stage": "Stage 3: Advanced Projects",
+                "stage": "Stage 3: Advanced Machine Learning",
                 "skills": [
-                    "Feature engineering",
-                    "Model tuning",
-                    "Data visualization",
-                    "Deployment basics"
+                    "Feature Engineering",
+                    "Model Tuning",
+                    "Data Visualization",
+                    "Model Deployment"
                 ],
                 "tasks": [
+                    "Create useful features from raw data",
+                    "Compare multiple machine learning models",
                     "Improve model performance",
-                    "Create meaningful features",
-                    "Compare different machine learning models",
-                    "Deploy a simple model application"
+                    "Deploy a simple prediction application"
                 ],
-                "project": "End-to-end machine learning prediction system"
+                "project": "Build an end-to-end machine learning prediction system"
             }
         ],
         "job_roles": [
+            "Data Science Intern",
             "Junior Data Scientist",
             "Machine Learning Intern",
-            "Data Science Intern",
             "Research Assistant"
         ]
     },
@@ -139,7 +139,7 @@ CAREER_PATHS = {
                 ],
                 "tasks": [
                     "Practice Python problem solving",
-                    "Learn arrays, lists, stacks and queues",
+                    "Learn arrays, strings, stacks and queues",
                     "Study time and space complexity",
                     "Process datasets using Pandas"
                 ],
@@ -152,7 +152,7 @@ CAREER_PATHS = {
                     "Regression",
                     "Classification",
                     "Clustering",
-                    "Model evaluation"
+                    "Model Evaluation"
                 ],
                 "tasks": [
                     "Train machine learning models",
@@ -165,24 +165,24 @@ CAREER_PATHS = {
             {
                 "stage": "Stage 3: Deployment and MLOps",
                 "skills": [
-                    "Flask or FastAPI",
+                    "FastAPI or Flask",
                     "Git and GitHub",
-                    "Docker basics",
-                    "Model deployment",
-                    "APIs"
+                    "Docker Basics",
+                    "REST APIs",
+                    "Model Deployment"
                 ],
                 "tasks": [
                     "Create an API for a trained model",
                     "Save and load machine learning models",
                     "Learn basic Docker commands",
-                    "Deploy a model-based application"
+                    "Deploy a machine learning application"
                 ],
                 "project": "Deploy a machine learning prediction API"
             }
         ],
         "job_roles": [
             "Machine Learning Intern",
-            "Junior ML Engineer",
+            "Junior Machine Learning Engineer",
             "AI Engineer Intern",
             "Python Developer"
         ]
@@ -198,7 +198,7 @@ CAREER_PATHS = {
                     "HTML",
                     "CSS",
                     "JavaScript",
-                    "Responsive design"
+                    "Responsive Design"
                 ],
                 "tasks": [
                     "Create web pages using HTML",
@@ -211,14 +211,14 @@ CAREER_PATHS = {
             {
                 "stage": "Stage 2: Frontend Development",
                 "skills": [
-                    "DOM manipulation",
+                    "DOM Manipulation",
                     "Events",
                     "Fetch API",
-                    "React basics"
+                    "React Basics"
                 ],
                 "tasks": [
                     "Handle button clicks and forms",
-                    "Use APIs to fetch data",
+                    "Fetch data from APIs",
                     "Learn React components and props",
                     "Create reusable UI components"
                 ],
@@ -230,13 +230,13 @@ CAREER_PATHS = {
                     "Node.js",
                     "Express.js",
                     "REST APIs",
-                    "MongoDB basics"
+                    "MongoDB Basics"
                 ],
                 "tasks": [
                     "Create backend routes",
-                    "Implement GET, POST, PATCH and DELETE",
-                    "Connect a frontend to a backend",
-                    "Store data in a database"
+                    "Implement CRUD operations",
+                    "Connect frontend and backend",
+                    "Store application data in a database"
                 ],
                 "project": "Build a full-stack task management application"
             }
@@ -263,11 +263,11 @@ CAREER_PATHS = {
                 ],
                 "tasks": [
                     "Practice programming fundamentals",
-                    "Learn data structures",
+                    "Learn common data structures",
                     "Write SQL queries",
-                    "Use Git and GitHub"
+                    "Learn Git and GitHub"
                 ],
-                "project": "Create a command-line student management system"
+                "project": "Build a command-line student management system"
             },
             {
                 "stage": "Stage 2: Backend Development",
@@ -276,11 +276,11 @@ CAREER_PATHS = {
                     "Express.js",
                     "REST APIs",
                     "Middleware",
-                    "Error handling"
+                    "Error Handling"
                 ],
                 "tasks": [
-                    "Create Express routes",
-                    "Implement CRUD operations",
+                    "Create Express.js routes",
+                    "Implement GET, POST, PATCH and DELETE",
                     "Use middleware",
                     "Handle request and response data"
                 ],
@@ -291,8 +291,8 @@ CAREER_PATHS = {
                 "skills": [
                     "MongoDB or PostgreSQL",
                     "Authentication",
-                    "API security",
-                    "Deployment basics"
+                    "API Security",
+                    "Deployment Basics"
                 ],
                 "tasks": [
                     "Connect the backend to a database",
@@ -309,12 +309,99 @@ CAREER_PATHS = {
             "Node.js Developer",
             "Python Developer"
         ]
+    },
+
+    "software developer": {
+        "career": "Software Developer",
+        "duration": "6-9 months",
+        "stages": [
+            {
+                "stage": "Stage 1: Programming Fundamentals",
+                "skills": [
+                    "Python or Java",
+                    "Data Structures",
+                    "Algorithms",
+                    "Object-Oriented Programming",
+                    "Problem Solving"
+                ],
+                "tasks": [
+                    "Learn variables, loops, functions and conditions",
+                    "Practice arrays, strings, stacks and queues",
+                    "Understand classes, objects and inheritance",
+                    "Solve beginner programming problems",
+                    "Practice coding problems regularly"
+                ],
+                "project": "Build a student management system using Python or Java"
+            },
+            {
+                "stage": "Stage 2: Core Software Development",
+                "skills": [
+                    "Git and GitHub",
+                    "SQL",
+                    "Exception Handling",
+                    "File Handling",
+                    "Debugging",
+                    "Testing"
+                ],
+                "tasks": [
+                    "Learn Git commands and GitHub workflow",
+                    "Practice SQL queries",
+                    "Handle errors using exception handling",
+                    "Read and write files",
+                    "Debug common programming errors",
+                    "Write basic unit tests"
+                ],
+                "project": "Build a command-line expense tracker with file storage"
+            },
+            {
+                "stage": "Stage 3: Application Development",
+                "skills": [
+                    "Backend or Frontend Development",
+                    "REST APIs",
+                    "Databases",
+                    "Authentication",
+                    "Deployment Basics"
+                ],
+                "tasks": [
+                    "Choose a frontend or backend specialization",
+                    "Build CRUD operations",
+                    "Connect an application to a database",
+                    "Implement basic authentication",
+                    "Deploy the project locally or online"
+                ],
+                "project": "Build a full-stack task management application"
+            },
+            {
+                "stage": "Stage 4: Portfolio and Interview Preparation",
+                "skills": [
+                    "Data Structures and Algorithms",
+                    "Problem Solving",
+                    "Resume Building",
+                    "Technical Interview Skills"
+                ],
+                "tasks": [
+                    "Solve coding problems regularly",
+                    "Build two or three practical projects",
+                    "Upload projects to GitHub",
+                    "Prepare a technical resume",
+                    "Practice technical interview questions"
+                ],
+                "project": "Create a complete software project and publish it on GitHub"
+            }
+        ],
+        "job_roles": [
+            "Software Developer Intern",
+            "Junior Software Developer",
+            "Python Developer",
+            "Java Developer",
+            "Backend Developer"
+        ]
     }
 }
 
 
 def normalize_career_name(career):
-    return career.strip().lower()
+    return career.strip().lower().replace("_", " ")
 
 
 def generate_roadmap(career, skill_gaps=None):
