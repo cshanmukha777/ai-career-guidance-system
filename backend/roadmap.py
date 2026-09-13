@@ -404,19 +404,14 @@ def normalize_career_name(career):
     return career.strip().lower().replace("_", " ")
 
 
-def generate_roadmap(career, skill_gaps=None):
-    career_key = normalize_career_name(career)
+def generate_roadmap(career, skill_gaps):
+    career_key = career.strip().lower()
 
-    if career_key not in CAREER_PATHS:
+    roadmap = CAREER_PATHS.get(career_key)
+
+    if roadmap is None:
         return {
             "error": f"No roadmap available for {career}"
         }
 
-    roadmap = CAREER_PATHS[career_key]
-
-    return {
-        "career": roadmap["career"],
-        "duration": roadmap["duration"],
-        "stages": roadmap["stages"],
-        "job_roles": roadmap["job_roles"]
-    }
+    return roadmap
