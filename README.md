@@ -119,8 +119,7 @@ Perform Skill-Gap Analysis
 Generate Personalized Roadmap
        |
        v
-
-
+```
 ## Installation
 
 ### 1. Clone the Repository
