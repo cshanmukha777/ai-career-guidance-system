@@ -60,6 +60,107 @@ CAREER_PATHS = {
             "Reporting Analyst"
         ]
     },
+    "cybersecurity analyst": {
+    "career": "Cybersecurity Analyst",
+    "duration": "5-8 months",
+    "stages": [
+        {
+            "stage": "Stage 1: Computer Fundamentals",
+            "skills": [
+                "Computer Networks",
+                "Operating Systems",
+                "Linux Basics",
+                "Windows Basics"
+            ],
+            "tasks": [
+                "Learn basic computer networking",
+                "Study operating system concepts",
+                "Practice Linux terminal commands",
+                "Understand Windows administration basics"
+            ],
+            "project": "Create a basic computer network diagram"
+        },
+        {
+            "stage": "Stage 2: Networking Basics",
+            "skills": [
+                "IP Addresses",
+                "DNS",
+                "HTTP and HTTPS",
+                "TCP and UDP",
+                "Firewalls"
+            ],
+            "tasks": [
+                "Study IPv4 and IPv6 addresses",
+                "Understand how DNS works",
+                "Learn HTTP and HTTPS requests",
+                "Compare TCP and UDP",
+                "Understand firewall rules"
+            ],
+            "project": "Build a small network monitoring report"
+        },
+        {
+            "stage": "Stage 3: Cybersecurity Fundamentals",
+            "skills": [
+                "CIA Triad",
+                "Authentication",
+                "Authorization",
+                "Encryption",
+                "Malware",
+                "Phishing",
+                "Common Cyber Attacks"
+            ],
+            "tasks": [
+                "Learn confidentiality, integrity and availability",
+                "Understand authentication methods",
+                "Study authorization and access control",
+                "Learn basic encryption concepts",
+                "Study malware and phishing attacks",
+                "Learn common cybersecurity threats"
+            ],
+            "project": "Create a password strength checker"
+        },
+        {
+            "stage": "Stage 4: Security Tools",
+            "skills": [
+                "Wireshark",
+                "Nmap",
+                "SIEM Basics",
+                "Log Analysis",
+                "Vulnerability Scanning"
+            ],
+            "tasks": [
+                "Capture and inspect packets using Wireshark",
+                "Scan a test network using Nmap",
+                "Understand SIEM fundamentals",
+                "Analyze sample security logs",
+                "Learn basic vulnerability scanning"
+            ],
+            "project": "Build a basic log analysis tool"
+        },
+        {
+            "stage": "Stage 5: Security Projects",
+            "skills": [
+                "Network Monitoring",
+                "Password Security",
+                "Log Analysis",
+                "Security Reporting"
+            ],
+            "tasks": [
+                "Monitor network activity in a test environment",
+                "Analyze password security",
+                "Detect suspicious log entries",
+                "Prepare a cybersecurity incident report"
+            ],
+            "project": "Build a basic network security monitoring project"
+        }
+    ],
+    "job_roles": [
+        "Cybersecurity Analyst",
+        "SOC Analyst",
+        "Security Operations Intern",
+        "Information Security Analyst"
+    ]
+},
 
     "data scientist": {
         "career": "Data Scientist",
@@ -396,16 +497,17 @@ CAREER_PATHS = {
             "Java Developer",
             "Backend Developer"
         ]
+        
     }
 }
 
 
 def normalize_career_name(career):
-    return career.strip().lower().replace("_", " ")
-
-
+    return " ".join(
+        career.strip().lower().replace("_", " ").split()
+    )
 def generate_roadmap(career, skill_gaps):
-    career_key = career.strip().lower()
+    career_key = normalize_career_name(career)
 
     roadmap = CAREER_PATHS.get(career_key)
 
@@ -413,5 +515,7 @@ def generate_roadmap(career, skill_gaps):
         return {
             "error": f"No roadmap available for {career}"
         }
+
+    roadmap["skill_gaps"] = skill_gaps
 
     return roadmap

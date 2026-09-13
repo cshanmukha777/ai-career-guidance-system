@@ -51,18 +51,33 @@ career_requirements = {
 }
 
 
-def find_skill_gaps(user_skills, career):
-    required_skills = career_requirements.get(career)
+def normalize_career_name(career):
+    return " ".join(
+        career.strip().lower().replace("_", " ").split()
+    )
 
-    if required_skills is None:
+
+def find_skill_gaps(career, user_skills):
+    normalized_career = normalize_career_name(career)
+
+    requirements = None
+    selected_career = None
+
+    for career_name, career_data in career_requirements.items():
+        if normalize_career_name(career_name) == normalized_career:
+            requirements = career_data
+            selected_career = career_name
+            break
+
+    if requirements is None:
         return {
-            "error": f"Career not found: {career}"
+            "error": f"Career '{career}' not found"
         }
 
     strong_skills = []
     skill_gaps = []
 
-    for skill, required_level in required_skills.items():
+    for skill, required_level in requirements.items():
         user_level = user_skills.get(skill, 0)
 
         if user_level >= required_level:
@@ -76,7 +91,7 @@ def find_skill_gaps(user_skills, career):
             })
 
     return {
-        "career": career,
+        "career": selected_career,
         "strong_skills": strong_skills,
         "skill_gaps": skill_gaps
     }
